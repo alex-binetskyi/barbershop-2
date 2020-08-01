@@ -1,0 +1,163 @@
+.order-form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.order-form__full-name,
+.order-form__contacts {
+  margin-bottom: 32px;
+
+  @include media-tablet {
+    margin-bottom: 35px;
+  }
+}
+
+.order-form__full-name .order-form__fields-wrapper {
+  @include media-tablet {
+    display: flex;
+  }
+
+  @include media-desktop {
+    justify-content: space-between;
+  }
+}
+
+.order-form__full-name .order-form__input {
+    @include media-desktop {
+      width: 30.8%;
+    }
+}
+
+.order-form__input {
+  margin-bottom: 6px;
+  width: 100%;
+  padding: 14px 18px 15px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  border: 1px solid #e5ddd5;
+  background-color: #ffffff;
+
+  &::placeholder {
+    color: #000000;
+  }
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:active {
+    border-color: #999999;
+  }
+
+  .order-form__input:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  @include media-tablet {
+    margin-bottom: 0px;
+    padding: 23px 24px 25px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+
+.order-form__contacts {
+  @include media-tablet {
+    .order-form__input {
+      margin-bottom: 35px;
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-desktop {
+    .order-form__input {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.order-form__contacts .order-form__fields-wrapper {
+  @include media-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.order-form__contacts  .order-form__input {
+  @include media-desktop {
+    width: 48%;
+  }
+}
+
+.order-form__comment-text {
+  margin-bottom: 40px;
+  width: 100%;
+  height: 112px;
+  padding: 14px 18px 15px;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  border: 1px solid #e5ddd5;
+  background-color: #ffffff;
+  resize: none;
+
+  &::placeholder {
+    color: #000000;
+  }
+
+  @include media-tablet {
+    margin-bottom: 55px;
+    padding: 23px 24px 25px;
+    font-size: 24px;
+    line-height: 30px;
+    height: 210px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 70px;
+  }
+}
+
+.order-form__submit {
+  margin-top: 47px;
+  width: 100%;
+  padding: 13px;
+  color: #ffffff;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: $lightbronze;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $darkbronze;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+    background-color: $darkbronze;
+  }
+
+  &:disabled {
+    background-color: #aeaeae;
+  }
+
+  @include media-tablet {
+    padding: 20px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

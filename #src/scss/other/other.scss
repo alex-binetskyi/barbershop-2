@@ -1,0 +1,29 @@
+//Класс, чтобы доступно скрыть элементы.
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+//Стили body.
+
+body {
+  margin: 0;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  background-color: $bg-darkgrey;
+}
+
+//Обертка.
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+}

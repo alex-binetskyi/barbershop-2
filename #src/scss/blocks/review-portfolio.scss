@@ -1,0 +1,32 @@
+.review-portfolio {
+  margin: 0 12px 20px;
+
+  @include media-tablet {
+    margin: 0;
+  }
+
+  @include media-desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.review-portfolio__autor {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: bold;
+
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.review-portfolio__autor cite {
+  font-style: normal;
+}
+
+.review-portfolio__author-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+}

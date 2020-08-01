@@ -1,0 +1,116 @@
+@mixin decorative-triangle-lightgray {
+  position: relative;
+  z-index: 1;
+
+  &::after{
+    content: "";
+    position: absolute;
+    z-index: 3;
+    bottom: -34px;
+    left: 0;
+    height: 35px;
+    width: 100%;
+    background: url("../img/corner-lightgray.svg") no-repeat;
+    transform: rotate(180deg);
+  }
+
+  @include media-tablet {
+    &::after {
+      bottom: -39px;
+      height: 40px;
+    }
+  }
+
+  @include media-desktop {
+    &::after {
+      bottom: -64px;
+      height: 65px;
+    }
+  }
+}
+
+@mixin decorative-triangle-darkgray {
+    position: relative;
+    z-index: 1;
+
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: 3;
+        bottom: -34px;
+        left: 0;
+        height: 35px;
+        width: 100%;
+        background: url("../img/corner-darkgray.svg") no-repeat;
+        transform: rotate(180deg);
+    }
+
+    @include media-tablet {
+        &::after {
+        bottom: -39px;
+        height: 40px;
+        }
+    }
+
+    @include media-desktop {
+        &::after {
+        bottom: -64px;
+        height: 65px;
+        }
+    }
+}
+
+@mixin decorative-triangle-gray {
+    position: relative;
+    z-index: 1;
+
+    &::after{
+        content: "";
+        position: absolute;
+        z-index: 3;
+        bottom: -34px;
+        left: 0;
+        height: 35px;
+        width: 100%;
+        background: url("../img/corner-gray.svg") no-repeat;
+        transform: rotate(180deg);
+    }
+
+    @include media-tablet {
+        &::after {
+        bottom: -39px;
+        height: 40px;
+        }
+    }
+
+    @include media-desktop {
+        &::after {
+        bottom: -64px;
+        height: 65px;
+        }
+    }
+}
+
+@mixin decorative-triangle-double {
+  position: relative;
+  z-index: 1;
+
+  @include media-tablet {
+      &::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      bottom: -1px;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      background: url("../img/corner-double.svg") no-repeat;
+      }
+  }
+
+  @include media-desktop {
+      &::after {
+        height: 65px;
+      }
+  }
+}

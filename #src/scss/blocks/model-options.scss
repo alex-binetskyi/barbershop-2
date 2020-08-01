@@ -1,0 +1,147 @@
+.model-options__title {
+  margin-bottom: 38px;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-tablet {
+    margin-bottom: 40px;
+    width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      margin-right: 26px;
+      flex-grow: 1;
+      height: 1px;
+      background-color: #e5ddd5;
+    }
+
+    &::after {
+      content: "";
+      margin-left: 26px;
+      flex-grow: 1;
+      height: 1px;
+      background-color: #e5ddd5;
+    }
+  }
+}
+
+.model-options__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+
+  @include media-custom-min(500px){
+    justify-content: space-between;
+  }
+
+  @include media-tablet {
+    margin-bottom: 60px;
+  }
+}
+
+.model-options__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  @include media-tablet {
+    margin-bottom: 0;
+  }
+}
+
+.model-options__radio {
+  display: none;
+}
+
+.model-options__label {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 90px;
+  margin-bottom: 15px;
+  padding-top: 64px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+
+  @include media-tablet{
+    font-size: 24px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: border-color .1s linear,box-shadow .1s linear;
+    top: 3px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e5ddd5;
+  }
+
+  &::after {
+    top: 18px;
+    z-index: -1;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ffffff;
+  }
+
+  &:hover {
+    &::before {
+      border-color: #d5c9bd;
+    }
+  }
+
+  &:active {
+    &::before {
+      box-shadow: inset 0 0 0 15px #d5c9bd;
+    }
+  }
+}
+
+.model-options__radio:checked ~ .model-options__label {
+  &::after {
+    z-index: 5;
+    border: 1px solid #e5ddd5;
+  }
+
+  &:hover {
+    &::before {
+      border-color: #d5c9bd;
+    }
+    &::after {
+      border-color: #d5c9bd;
+    }
+  }
+
+  &:active {
+    &::before {
+      box-shadow: inset 0 0 0 15px #d5c9bd;
+    }
+    &::after {
+      box-shadow: inset 0 0 0 50px #d5c9bd;
+    }
+  }
+}
+
+.model-options__item svg {
+  margin: 0 auto;
+}

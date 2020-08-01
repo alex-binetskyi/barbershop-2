@@ -1,0 +1,172 @@
+.news {
+  padding: 70px 20px 30px;
+  color: #000000;
+  background-color: $bg-lightgrey;
+
+  @include media-tablet {
+    padding: 85px 65px 30px;
+  }
+
+  @include media-desktop {
+    padding: 120px 0 30px;
+  }
+}
+
+.news__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include media-desktop {
+    box-sizing: border-box;
+  }
+}
+
+.news__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+
+  @include media-tablet {
+    width: 100%;
+    order: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.news__item {
+  display: none;
+  margin-top: 20px;
+  border-bottom: 1px solid #e5ddd5;
+
+  &:nth-child(-n+2) {
+    display: block;
+  }
+
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+
+  @include media-tablet {
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 40px;
+    border-bottom: none;
+  }
+
+  @include media-desktop {
+    display: block;
+    width: 33%;
+    padding-right: 50px;
+  }
+}
+
+.news__list--opened .news__item {
+  display: block;
+}
+
+.news__link {
+  display: flex;
+  color: #000000;
+  text-decoration: none;
+
+  &:hover {
+    .news__date {
+      background-color: $lightbronze;
+      &::after {
+        border-top-color: $lightbronze;
+      }
+    }
+    .news__text {
+      color: $lightbronze;
+      text-decoration: underline;
+    }
+  }
+
+  &:active {
+    .news__date {
+      color: rgba($color: #ffffff, $alpha: 0.3);
+      background-color: $darkbronze;
+      &::after {
+        border-top-color: $darkbronze;
+      }
+    }
+    .news__text {
+      color: $darkbronze;
+      text-decoration: underline;
+    }
+  }
+}
+
+.news__title {
+  margin: 0 0 30px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-tablet {
+    width: 50%;
+    margin-bottom: 50px;
+    text-align: start;
+  }
+
+  @include media-tablet {
+    margin-left: 70px;
+  }
+}
+
+.news__date {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  min-width: 50px;
+  height: 50px;
+  padding: 3px 10px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  background-color: #000000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 0;
+    border: 10px solid transparent;
+    border-top-color: #000000;
+    border-right-width: 25px;
+    border-bottom: none;
+    border-left-width: 25px;
+    bottom: -10px;
+    height: 0;
+  }
+}
+
+.news__day {
+  display: block;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.news__text {
+  margin: 0 0 35px 20px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.news__to-all {
+
+  @include media-tablet {
+    width: 160px;
+    margin-bottom: auto;
+  }
+}

@@ -1,0 +1,145 @@
+.user-list {
+  @include list-reset;
+
+  @include media-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @include media-desktop{
+    width: auto;
+    max-width: 160px;
+  }
+}
+
+.user-list__item {
+  background-color: $darkbronze;
+  border-top: 1px solid $darkbronze;
+  border-bottom: 1px solid #71543f;
+
+  @include media-tablet {
+    margin-right: 32px;
+    background: none;
+    border: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.user-list__item a {
+  display: block;
+  padding: 12px 21px 13px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #755a46;
+    border-top-color: #755a46;
+  }
+
+  &:active {
+    background-color: $darkbronze;
+    border-top-color: $darkbronze;
+  }
+
+  @include media-tablet {
+    &:hover {
+      color: $lightbronze;
+      background-color: #000000;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #000000;
+      opacity: 0.3;
+    }
+  }
+
+  @include media-desktop {
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: #b2b2b2;
+      background-color: #ffffff;
+      opacity: 1;
+    }
+  }
+}
+
+.user-list__link-icon {
+  position: absolute;
+  top: 16px;
+  left: 21px;
+  fill: #ffffff;
+  opacity: 0.3;
+
+  @include media-tablet {
+    top: 29px;
+    left: 6px;
+  }
+}
+
+
+.user-list__item .user-list__link--login {
+  position: relative;
+  padding-left: 49px;
+
+  &:hover .user-list__link-icon {
+    opacity: 1;
+  }
+
+  &:active .user-list__link-icon {
+    opacity: 0.3;
+  }
+
+  @include media-tablet {
+    width: 60px;
+    height: 70px;
+    padding: 0;
+    font-size: 0;
+
+    &:hover .user-list__link-icon {
+      fill: $lightbronze;
+      opacity: 1;
+    }
+  
+    &:active .user-list__link-icon {
+      fill: #ffffff;
+      opacity: 0.3;
+    }
+  }
+
+  @include media-desktop {
+    width: auto;
+    height: auto;
+    padding: 25px 30px 23px 50px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover .user-list__link-icon {
+      fill: #b2b2b2;
+      opacity: 1;
+    }
+
+    &:active .user-list__link-icon {
+      fill: #e5e5e5;
+      opacity: 1;
+    }
+
+    .user-list__link-icon {
+      left :15px;
+    }
+  }
+}
+

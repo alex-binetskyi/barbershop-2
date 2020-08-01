@@ -1,0 +1,39 @@
+.button {
+  display: block;
+  padding: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+
+  &--light{
+    color: #000000;
+    border: 1px solid #e5ddd5;
+
+    &:hover {
+      border-color: #d5c9bd;
+    }
+
+    &:active {
+      color: rgba(0,0,0,.3);
+      background-color: #d5c9bd;
+    }
+  }
+
+  &--dark{
+    color: #ffffff;
+    border: 1px solid #3d3d3d;
+
+
+    &:hover {
+      border-color: #515151;
+    }
+
+    &:active {
+      color: rgba(255,255,255,.3);
+      background-color: #252525;
+      border-color: #252525;
+    }
+  }
+}

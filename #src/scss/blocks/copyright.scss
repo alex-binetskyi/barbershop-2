@@ -1,0 +1,34 @@
+.copyright {
+  padding: 30px 20px 0;
+
+  @include media-tablet {
+    width: 160px;
+    padding: 0;
+  }
+
+  @include media-desktop {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+  }
+}
+
+.copyright__text {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  font-weight: normal;
+
+  @include media-desktop{
+    margin: 0 50px 15px auto;
+  }
+}
+
+.copyright__link {
+  @include media-desktop {
+    width: 160px;
+    margin-left: auto;
+  }
+}
